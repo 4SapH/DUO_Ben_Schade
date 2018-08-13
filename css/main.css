@@ -49,6 +49,17 @@ main {
   position: relative;
   background-color: #F1F0EF;
 }
+@media (max-width: 550px) {
+  main {
+    width: 75%;
+  }
+}
+@media (max-width: 370px) {
+  main {
+    width: 100%;
+    float: none;
+  }
+}
 
 header {
   margin: 0;
@@ -112,6 +123,21 @@ nav.links li:hover a {
     display: block;
   }
 }
+@media (max-width: 370px) {
+  header nav.links {
+    float: none;
+  }
+  nav.links li {
+    font-size: 1rem;
+    display: inline;
+  }
+  nav.links li::after {
+    content: ' | '
+  }
+  nav.links li:last-child::after {
+    content: none;
+  }
+}
 
 @media (max-width: 900px) {
   main {
@@ -122,6 +148,12 @@ nav.links li:hover a {
   main {
     width: 100%;
     min-height: 75%;
+  }
+}
+@media (max-width: 370px) {
+  main {
+    padding: 3.5rem 2rem;
+    height: 75%;
   }
 }
 
@@ -137,6 +169,18 @@ nav.links li:hover a {
   color: #222222;
   word-spacing: 2px;
   line-height: 1.5;
+}
+@media (max-width: 370px) {
+  .content {
+    position: static;
+    width: 100%;
+    padding-top: 4rem;
+    font-size: 1.6rem;
+  }
+  .content p {
+    font-size: 1.5rem;
+    word-spacing: default;
+  }
 }
 
 aside {
